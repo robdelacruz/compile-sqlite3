@@ -1,0 +1,8 @@
+Makefile for downloading, compiling, and deploying sqlite3 on Linux
+
+Usage
+
+make clean    -- clean up all intermediate downloads and files.
+make all      -- download amalgamated source files and recompile them.
+make install  -- install 'sqlite3' binary
+
