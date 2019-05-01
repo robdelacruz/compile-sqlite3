@@ -1,0 +1,19 @@
+Compile sqlite3 with FTS5 and readline
+--------------------------------------
+https://superuser.com/questions/82408/sqlite-with-readline-support-on-ubuntu/1364261#1364261
+
+1. Download the zip file containing C source code from https://www.sqlite.org/download.html (sqlite-amalgamation-nnnnnnn.zip)
+2. Unzip it to get shell.c, sqlite3.c, and the .h files.
+3. If not already installed, install libreadline and libncurses. On Ubuntu Linux, install by running the command below:
+
+sudo apt install libreadline-dev libncurses-dev
+
+4. Run the command below to build:
+
+gcc -DSQLITE_ENABLE_FTS5 -DHAVE_READLINE shell.c sqlite3.c -lpthread -ldl -lm -lreadline -lncurses -o sqlite3
+
+Note: You need -DHAVE_READLINE and -lreadline and -lncurses to get readline functionality.
+
+Copy the sqlite3 binary to /usr/bin or add to your path.
+
+
