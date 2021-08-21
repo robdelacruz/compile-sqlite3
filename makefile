@@ -1,7 +1,10 @@
-VER=3280000
+VER=3360000
 SRCNAME=sqlite-amalgamation-$(VER)
 SRCFILE=$(SRCNAME).zip
-SRCZIP_URL=https://www.sqlite.org/2019/$(SRCFILE)
+SRCZIP_URL=https://www.sqlite.org/2021/$(SRCFILE)
+
+# Current link to sqlite3 amalgamation:
+# https://www.sqlite.org/2021/sqlite-amalgamation-3360000.zip
 
 CFLAGS=-DSQLITE_ENABLE_FTS5 -DHAVE_READLINE
 
