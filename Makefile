@@ -11,6 +11,9 @@ CFLAGS=-DSQLITE_ENABLE_FTS5 -DHAVE_READLINE
 
 all: sqlite3
 
+dep:
+	sudo apt install libreadline-dev libncurses-dev
+
 sqlite3: sqlite3.c sqlite3.h shell.c sqlite3ext.h
 	gcc $(CFLAGS) shell.c sqlite3.c -lpthread -ldl -lm -lreadline -lncurses -o sqlite3
 
