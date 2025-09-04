@@ -17,6 +17,10 @@ dep:
 sqlite3: sqlite3.c sqlite3.h shell.c sqlite3ext.h
 	gcc $(CFLAGS) shell.c sqlite3.c -lpthread -ldl -lm -lreadline -lncurses -o sqlite3
 
+sqlite3.so: sqlite3.c sqlite3.h shell.c sqlite3ext.h
+	gcc -shared -o sqlite3.o sqlite3.c -fPIC 
+
+
 sqlite3.c:
 	wget $(SRCZIP_URL)
 	unzip $(SRCFILE)
