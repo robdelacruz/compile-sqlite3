@@ -1,6 +1,7 @@
 *.swp
 *.c
 *.h
+*.so
 sqlite3
 sqlite-amalgamation*
 
